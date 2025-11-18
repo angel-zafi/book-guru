@@ -1,4 +1,3 @@
-
 var express = require('express');
 var bodyParser = require("body-parser");
 var app = express();
@@ -20,5 +19,13 @@ server = app.listen(PORT, function () {
 address.address}:${address.port}`;
     console.log(`Demo project at: ${baseUrl}`);
 });
+
+
+// import utils
+const { deleteBook } = require('./utils/DeleteBookUtil.js');
+
+// delete path
+app.delete('/delete-book/:id', deleteBook);
+
 
 module.exports = {app, server}
