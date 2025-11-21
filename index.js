@@ -13,6 +13,9 @@ app.use(express.static("./public"));
 app.use("/api", addBookRouter);
 
 
+const { viewBook } = require('./utils/ViewBookUtil')
+app.get('/view-book', viewBook)
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
