@@ -17,7 +17,7 @@ function viewBook() {
     '<td>' + response[i].genre + '</td>' +
     '<td>' + response[i].status + '</td>' +
     '<td>' + 
-    '<button type="button" class="btn btn-danger" onclick="deleteResource(\'' + response[i].id + '\')"> Delete</button>' +'</td>'+'</tr>'
+    '<button type="button" class="btn btn-danger" onclick="deleteBook(\'' + response[i].id + '\')"> Delete</button>' +'</td>'+'</tr>'
     }
     document.getElementById('tableContent').innerHTML = html;
     };
