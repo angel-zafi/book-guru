@@ -12,14 +12,12 @@ function viewBook() {
     {
     html += '<tr>' +
     '<td>' + (i+1) + '</td>' +
-    '<td>' + response[i].name + '</td>' +
-    '<td>' + response[i].location + '</td>' +
-    '<td>' + response[i].description + '</td>' +
-    '<td>' + response[i].owner + '</td>' +
-    '<td>' +
-    '<button type="button" class="btn btn-warning" onclick="editResource(\'' + JSON.stringify(response[i]).replaceAll('\"'
-    , '&quot;') + '\')">Edit </button> ' 
-    +'<button type="button" class="btn btn-danger" onclick="deleteResource(\'' + response[i].id + '\')"> Delete</button>' +'</td>'+'</tr>'
+    '<td>' + response[i].title + '</td>' +
+    '<td>' + response[i].author + '</td>' +
+    '<td>' + response[i].genre + '</td>' +
+    '<td>' + response[i].status + '</td>' +
+    '<td>' + 
+    '<button type="button" class="btn btn-danger" onclick="deleteResource(\'' + response[i].id + '\')"> Delete</button>' +'</td>'+'</tr>'
     }
     document.getElementById('tableContent').innerHTML = html;
     };
