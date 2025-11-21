@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Book Guru</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Link your CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">BG</div>
+            <div class="logo-text">
+                <span>Book Guru</span>
+                <span class="subtitle">Mini Library Management Web App</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            Sprint 1 · DevOps Project
+        </div>
+    </header>
+
+    <main>
+        <div class="grid">
+            
+            <!-- LEFT SIDE: Shelf Preview -->
+            <section class="panel">
+                <div class="panel-header">
+                    <div>
+                        <div class="panel-title">Library Shelf</div>
+                        <div class="panel-subtitle">Sample view of books — not connected yet.</div>
+                    </div>
+                    <span class="badge">UI Only</span>
+                </div>
+
+                <div class="search-row">
+                    <div class="search-input">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search by title, author, or genre" />
+                    </div>
+                    <div class="icon-pill">⚙️</div>
+                </div>
+
+                <div class="tag-row">
+                    <span class="tag">All</span>
+                    <span class="tag">Business</span>
+                    <span class="tag">Finance</span>
+                    <span class="tag">Technology</span>
+                </div>
+
+                <div class="shelf-section">
+                    <div class="shelf-label">A – F</div>
+                    <div class="card-row">
+                        <article class="book-card">
+                            <div class="book-label-chip">Featured</div>
+                            <div class="book-title">Sample Book</div>
+                            <div class="book-author">Author Name</div>
+                            <div class="book-desc">Placeholder card to represent book styling.</div>
+                            <div class="card-buttons">
+                                <button class="btn btn-primary">Read Now</button>
+                                <button class="btn btn-secondary">Details</button>
+                            </div>
+                        </article>
+
+                        <article class="book-card">
+                            <div class="book-label-chip">Popular</div>
+                            <div class="book-title">Example Book</div>
+                            <div class="book-author">Another Author</div>
+                            <div class="book-desc">Placeholder UI card.</div>
+                            <div class="card-buttons">
+                                <button class="btn btn-primary">Read Now</button>
+                                <button class="btn btn-secondary">Details</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="shelf-section">
+                    <div class="shelf-label">G – L</div>
+                    <div class="card-row">
+                        <article class="book-card">
+                            <div class="book-label-chip">New</div>
+                            <div class="book-title">Sample Book</div>
+                            <div class="book-author">Someone</div>
+                            <div class="book-desc">Another placeholder card.</div>
+                            <div class="card-buttons">
+                                <button class="btn btn-primary">Read Now</button>
+                                <button class="btn btn-secondary">Details</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RIGHT SIDE: Add Book Form (Your Feature) -->
+            <section class="panel add-panel">
+                <div class="panel-header">
+                    <div>
+                        <div class="panel-title">Add a New Book</div>
+                        <div class="panel-subtitle">Sends data to backend (POST /api/add-book)</div>
+                    </div>
+                    <span class="badge">Feature</span>
+                </div>
+
+                <form id="add-book-form" autocomplete="off">
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="title">Book Title</label>
+                            <input type="text" id="title" name="title" placeholder="e.g. Corporate Finance" />
+                        </div>
+
+                        <div class="field-group">
+                            <label for="author">Author</label>
+                            <input type="text" id="author" name="author" placeholder="e.g. Brealey" />
+                        </div>
+
+                        <div class="field-group">
+                            <label for="genre">Genre / Category</label>
+                            <input type="text" id="genre" name="genre" placeholder="e.g. Finance, Fiction" />
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-add">Add Book</button>
+                    <div id="add-book-result" class="status"></div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Frontend Script -->
+    <script src="js/add.js"></script>
+</body>
+</html>
+

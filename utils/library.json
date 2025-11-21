@@ -6,6 +6,13 @@
       "author": "J.K. Rowling",
       "genre": "Fantasy",
       "status": "Available"
+    },
+    {
+      "bookId": "B1763752507379",
+      "title": "Harry Potter",
+      "author": "J.K. Rowling",
+      "genre": "Fantasyyyy",
+      "status": "Available"
     }
   ]
 }
