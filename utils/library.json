@@ -6,6 +6,14 @@
         "author": "J.K. Rowling",
         "genre": "Fantasy",
         "status": "Available"
+      },
+
+      {
+        "bookId": "B1763533397822",
+        "title": "The Psychology of Money",
+        "author": "Morgan Housel",
+        "genre": "Finance",
+        "status": "Available"
       }
     ]
   }
