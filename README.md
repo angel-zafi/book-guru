@@ -15,7 +15,6 @@
 	•	Leads stand-ups every Monday & Friday (15 mins)
 	•	Oversees documentation, reporting, and submission
 	•	Ensures DevOps principles are applied (Lean, Agile, Scrumban, TDD mindset)
-	•	Sets up GitHub labels, milestones, issue templates, and PR templates
 
 3. Release Manager – Maria
 	•	Leads integration and verifies feature compatibility
@@ -85,7 +84,7 @@ We follow a clean and industry-standard GitFlow model:
 
 Primary Branches
 	•	main → stable, production-ready branch
-	•	dev → integration branch (all features merge here first)
+	•	testing-branch → integration branch (all features merge here first)
 
 Feature Branch Pattern
 
@@ -96,7 +95,7 @@ feature/<name>-<feature-name>
 Examples:
 
 feature/angel-delete-book
-feature/alisha-retrieve-book
+feature/alisha-view-book
 feature/maria-add-book
 
 Pull Request Workflow
@@ -181,16 +180,16 @@ Slides, demo walkthrough, final LMS submission
 
 /public
    /js
-     - alisha.js
-     - maria.js
-     - angel.js
+     - alisha-view-book.js
+     - maria-add-book.js
+     - angel-delete-book.js
    index.html
    styles.css
 
 /utils
-   AddBookUtil.js
-   RetrieveUtil.js
-   DeleteBookUtil.js
+   MariaAddBookUtil.js
+   AlishaViewBookUtil.js
+   AngelDeleteBookUtil.js
    library.json
    library.template.json
 
