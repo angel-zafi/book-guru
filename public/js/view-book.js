@@ -22,7 +22,7 @@ async function loadBooks() {
     try {
         const response = await fetch('/view-book');
         const data = await response.json();
-        displayBooks(data.books || []);
+        displayBooks(data || []);
     } catch (error) {
         console.error('Error loading books:', error);
         container.innerHTML = '<div class="empty-state" style="grid-column: 1/-1;"><p>❌ Error loading books</p></div>';
