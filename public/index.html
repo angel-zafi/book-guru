@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>📚 Book Guru</h1>
+        <p>Your Personal Library Management System</p>
     </header>
 
     <div class="container">
@@ -22,7 +23,7 @@
             <div class="content">
                 <div class="filter-container">
                     <div class="filter-input">
-                        <input type="text" id="searchInput" placeholder="Search by title, author, or genre..." onkeyup="filterBooks()">
+                        <input type="text" id="searchInput" placeholder="🔍 Search by title, author, or genre..." onkeyup="filterBooks()">
                     </div>
                     <button class="btn btn-primary" onclick="loadBooks()">🔄 Refresh</button>
                 </div>
@@ -38,7 +39,7 @@
         <!-- Add Section -->
         <div id="add" class="section">
             <div class="content">
-                <h2 style="margin-bottom: 30px; color: #1e3c72;">Add New Book</h2>
+                <h2 style="margin-bottom: 30px; color: #1a1a2e;">📝 Add New Book</h2>
 
                 <div id="alertContainer"></div>
 
@@ -60,8 +61,49 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Add Book</button>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px; width: 100%;">➕ Add Book</button>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Detail Modal -->
+    <div id="bookDetailModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeBookDetail()">&times;</button>
+            
+            <div class="book-detail-container">
+                <div class="book-detail-left">
+                    <div class="book-cover">
+                        <img id="detailBookImage" src="images/book-1.jpg" alt="Book Cover">
+                    </div>
+                    <button class="btn btn-danger" onclick="deleteFromDetail(event)" style="width: 100%; margin-top: 20px;">🗑️ Delete Book</button>
+                </div>
+
+                <div class="book-detail-right">
+                    <h1 id="detailTitle" class="detail-title">Book Title</h1>
+                    <p id="detailAuthor" class="detail-author">by Author Name</p>
+                    
+                    <div class="detail-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Genre:</span>
+                            <span id="detailGenre" class="meta-value">Fiction</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Status:</span>
+                            <span id="detailStatus" class="meta-value status-badge">Available</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-description">
+                        <h3>Book Summary</h3>
+                        <p id="detailDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum consequat lectus, sed sollicitudin elit vivid volutpat ipsum dolor sit amet.</p>
+                    </div>
+
+                    <div class="detail-actions">
+                        <button class="btn btn-secondary" onclick="closeBookDetail()">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
