@@ -40,16 +40,15 @@ Our team applied several core DevOps principles throughout Part 1:
 	•	Transparent task tracking using Jira/Asana
 
 3. Automation Mindset
-	•	Consistent Git branch creation
-	•	Template-based PRs and Issues
-	•	GitHub labels + milestones for automated categorisation
+	• Used standardized GitHub labels to categorize issues and PRs
+	• Milestones used to group work by release/sprint
 
-4. Continuous Integration
+5. Continuous Integration
 	•	All features developed in isolated branches
 	•	Merged into dev only after PR review
 	•	Integrated early to prevent conflicts
 
-5. TDD Influence
+6. TDD Influence
 
 While Part 1 did not require full automated testing, we adopted the mindset:
 	•	Define test cases upfront
